@@ -1,0 +1,12 @@
+torch>=1.10.0
+torchaudio>=0.10.0
+transformers>=4.24.0
+datasets>=2.7.0
+numpy>=1.21.0
+scikit-learn>=1.0.0
+peft>=0.3.0
+soundfile>=0.10.0
+matplotlib>=3.5.0
+tqdm>=4.62.0
+speechbrain>=0.5.12
+scipy>=1.7.0 
