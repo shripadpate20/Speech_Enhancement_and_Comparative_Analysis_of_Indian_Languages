@@ -194,9 +194,9 @@ def main():
     print(f"Using device: {device}")
     
     # Set up paths and configuration
-    vox2_root = "/kaggle/input/voxceleb1-and-2/vox2_test_aac/aac"  # Change this to your VoxCeleb2 path
-    vox1_root = "/kaggle/input/voxceleb1-and-2/vox1_test_wav/wav"  # Change this to your VoxCeleb1 path
-    trials_file = "/kaggle/input/text-data/veri_test2.txt"  # Change this to your trials file
+    vox2_root = "/kaggle/input/voxceleb1-and-2/vox2_test_aac/aac"  
+    vox1_root = "/kaggle/input/voxceleb1-and-2/vox1_test_wav/wav"
+    trials_file = "/kaggle/input/text-data/veri_test2.txt"
     
     # Initialize feature extractor
     feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained('microsoft/unispeech-sat-large-sv')
@@ -288,7 +288,7 @@ def main():
         print(f"Epoch {epoch+1}, Loss: {total_loss/len(train_loader):.4f}")
         
         # Evaluate after each epoch
-        if (epoch + 1) % 2 == 0 or epoch == epochs - 1:  # Evaluate every 2 epochs or at the end
+        if (epoch + 1) % 2 == 0 or epoch == epochs - 1:  
             print(f"Evaluating after epoch {epoch+1}...")
             current_eer, current_tar, current_acc = evaluate(model, eval_loader, feature_extractor, device)
             
